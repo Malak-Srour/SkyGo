@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".activities.FlightResultsActivity">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:padding="16dp"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="← Back"
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✈️ Flight Results"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_search_criteria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NYC → LON | 2025-07-15 | Economy"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:background="@drawable/search_criteria_background" />
+    </LinearLayout>
+
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_flights"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"/>
+
+        <TextView
+            android:id="@+id/text_view_no_flights"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="No flights found for your search criteria"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

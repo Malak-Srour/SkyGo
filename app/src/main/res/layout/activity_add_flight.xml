@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/cardBackground"
+        android:padding="24dp"
+        android:elevation="4dp"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/editTextFlightId"
+            style="@style/StyledEditText"
+            android:hint="Flight ID" />
+
+        <EditText
+            android:id="@+id/editTextAirline"
+            style="@style/StyledEditText"
+            android:hint="Airline" />
+
+        <EditText
+            android:id="@+id/editTextOrigin"
+            style="@style/StyledEditText"
+            android:hint="Origin (e.g., NYC)" />
+
+        <EditText
+            android:id="@+id/editTextDestination"
+            style="@style/StyledEditText"
+            android:hint="Destination (e.g., LON)" />
+
+        <EditText
+            android:id="@+id/editTextDeparture"
+            style="@style/StyledEditText"
+            android:hint="Departure Time (e.g., 08:00)" />
+
+        <EditText
+            android:id="@+id/editTextArrival"
+            style="@style/StyledEditText"
+            android:hint="Arrival Time (e.g., 20:30)" />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            style="@style/StyledEditText"
+            android:hint="Date (e.g., 2025-07-15)" />
+
+        <EditText
+            android:id="@+id/editTextClass"
+            style="@style/StyledEditText"
+            android:hint="Class (Economy, Business...)" />
+
+        <EditText
+            android:id="@+id/editTextSeats"
+            style="@style/StyledEditText"
+            android:hint="Total Seats"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            style="@style/StyledEditText"
+            android:hint="Price"
+            android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/buttonSubmitFlight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Flight"
+            android:textColor="@color/textPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:elevation="2dp"/>
+    </LinearLayout>
+</ScrollView>

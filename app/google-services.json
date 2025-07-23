@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "683564937648",
+    "project_id": "skygo-flight-booking",
+    "storage_bucket": "skygo-flight-booking.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683564937648:android:35362078acbf02e5396675",
+        "android_client_info": {
+          "package_name": "com.example.skygo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr_WXGSPOl8yycHhDMcd_NTQVE_8grT6U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

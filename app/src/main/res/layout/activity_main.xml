@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Logout Button -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#DC2626" />
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✈️"
+                android:textSize="64sp"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SkyGo"
+                android:textColor="@color/colorPrimary"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/text_view_welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to SkyGo!"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <!-- Flight Search Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/cardBackground">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔍 Search Flights"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="20dp" />
+
+                <!-- Origin and Destination -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="From"
+                            android:textColor="#333333"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_origin"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="To"
+                            android:textColor="#333333"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Date and Class -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="📅 Departure Date"
+                            android:textColor="#333333"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/edit_text_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/edittext_background"
+                            android:drawableEnd="@android:drawable/ic_menu_my_calendar"
+                            android:drawablePadding="8dp"
+                            android:hint="Select Date"
+                            android:padding="12dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="Class"
+                            android:textColor="#333333"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/spinner_class"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/spinner_background"
+                            android:padding="12dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Passengers Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="👥 Passengers"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="24dp">
+
+                    <!-- Adults -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Adults (12+)"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:background="@drawable/counter_background"
+                            android:padding="4dp">
+
+                            <Button
+                                android:id="@+id/button_adults_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="-"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                android:backgroundTint="@color/colorBackground"
+                                android:elevation="2dp" />
+
+                            <TextView
+                                android:id="@+id/text_view_adults"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="1"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/button_adults_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="+"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                android:backgroundTint="@color/colorBackground"
+                                android:elevation="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Children -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Children (2–11)"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:background="@drawable/counter_background"
+                            android:padding="4dp">
+
+                            <Button
+                                android:id="@+id/button_children_minus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="-"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                android:backgroundTint="@color/colorBackground"
+                                android:elevation="2dp" />
+
+                            <TextView
+                                android:id="@+id/text_view_children"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:id="@+id/button_children_plus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="0dp"
+                                android:minHeight="0dp"
+                                android:paddingHorizontal="16dp"
+                                android:paddingVertical="8dp"
+                                android:text="+"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/colorPrimary"
+                                android:backgroundTint="@color/colorBackground"
+                                android:elevation="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!-- Search Button -->
+                <Button
+                    android:id="@+id/button_search_flights"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="4dp"
+                    android:text="Search Flights"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Why Choose SkyGo Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Why Choose SkyGo?"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/cardBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="💰"
+                        android:textSize="32sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Best Prices"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/cardBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="⚡"
+                        android:textSize="32sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fast Booking"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/cardBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🛡️"
+                        android:textSize="32sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Secure"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

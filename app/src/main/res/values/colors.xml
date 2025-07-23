@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep Blue for primary -->
+    <color name="colorPrimary">#1E3A8A</color> <!-- Navy Blue -->
+    <color name="colorPrimaryDark">#1E40AF</color> <!-- Darker Blue -->
+
+    <!-- Accent Blue for highlights -->
+    <color name="colorAccent">#3B82F6</color> <!-- Light Gradient Blue -->
+
+    <!-- Light background similar to sky -->
+    <color name="colorBackground">#E0E7FF</color> <!-- Pale bluish white -->
+
+    <!-- Text colors -->
+    <color name="textPrimary">#F9FAFB</color> <!-- Light text -->
+    <color name="textSecondary">#CBD5E1</color> <!-- Subtext color -->
+
+    <!-- Optional: white for card backgrounds -->
+    <color name="cardBackground">#FFFFFF</color>
+
+    <color name="orange_price">#FF5722</color>
+
+    <color name="buttonPrimary">#E2E1EB</color>
+
+</resources>

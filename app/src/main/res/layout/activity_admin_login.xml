@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:text="Admin Login"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextAdminEmail"
+        android:hint="Admin Email"
+        android:inputType="textEmailAddress"
+        style="@style/StyledEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/editTextAdminPassword"
+        android:hint="Password"
+        android:inputType="textPassword"
+        style="@style/StyledEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonAdminLogin"
+        android:text="Login"
+        android:textColor="@color/textPrimary"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+</LinearLayout>

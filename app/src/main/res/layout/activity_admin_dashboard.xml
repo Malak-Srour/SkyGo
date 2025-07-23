@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:padding="16dp">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/textViewAdminGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Admin!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:weightSum="3"
+        android:layoutDirection="ltr"> <!-- 👈 رجّعناه طبيعي -->
+
+        <!-- 1. Manage Users -->
+        <Button
+            android:id="@+id/buttonManageUsers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manage"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/textPrimary"
+            android:layout_marginEnd="4dp" />
+
+        <!-- 2. View Reservations -->
+        <Button
+            android:id="@+id/buttonViewReservations"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="View"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/textPrimary"
+            android:layout_marginHorizontal="4dp" />
+
+        <!-- 3. Logout -->
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Logout"
+            android:backgroundTint="#DC2626"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFlights"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Floating Add Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonAddFlight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
+        android:src="@android:drawable/ic_input_add"
+        android:contentDescription="Add Flight"
+        app:backgroundTint="@color/colorPrimary"
+        app:tint="@android:color/white" />
+</LinearLayout>
